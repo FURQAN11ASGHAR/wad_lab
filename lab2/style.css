@@ -39,6 +39,10 @@ h2+p{
     
     font-size:100%;
 }
+#contact h1{
+    text-align: center;
+
+}
 #contact a:link{
     color: whitesmoke;
 }
