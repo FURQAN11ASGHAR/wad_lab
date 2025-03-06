@@ -1,0 +1,62 @@
+
+body{
+    background-color: rgb(12, 10, 10);
+    color: rgb(251, 251, 243);
+    text-decoration-thickness: 5%;
+}
+header{
+    background-color:rgb(178, 178, 122);
+    color:black;
+    font-size: 50%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-weight: 800;
+    
+}
+header a{
+    padding-top:15px;
+    padding-right:19px;
+    padding-left: 13px;
+    font-size: 26px;
+    color: whitesmoke;
+}
+header a:visited{
+    color:brown;
+}
+#intersts h1{
+text-align: center;
+}
+#myself h1{
+    text-align: center;
+}
+
+nav{
+    padding: 10px;
+}
+h2{
+    text-align: center;
+}
+h2+p{
+    
+    font-size:100%;
+}
+#contact a:link{
+    color: whitesmoke;
+}
+#contact a:visited{
+    color: brown;
+}
+
+figure img{
+width: 200px;
+height: 200px;
+}
+a{
+    text-decoration: none;
+}
+#rep{
+    font-weight: 600;
+}
+#rep ul{
+    
+    font-size: 80%;
+}
