@@ -1,0 +1,251 @@
+:root {
+    --secondary-color: lightblue;
+    --background-color: rgb(160, 160, 231);
+    --card-bg-color: rgb(11, 11, 78);
+    --hover-blue:rgb(71, 71, 142);
+    --text-color: white;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "profile article about"
+        "profile article previous"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 1200px;
+    margin: auto;
+}
+#profile-card:hover{
+    background-color: var(--hover-blue);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 15px lightgray;
+}
+#article:hover{
+    background-color: var(--hover-blue);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 15px lightgray;
+}
+
+#about:hover{
+    background-color: var(--hover-blue);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 15px lightgray;
+}
+.previous:hover{
+    background-color: var(--hover-blue);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 15px lightgray;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: rgb(71, 71, 142);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: whitesmoke;
+    font-weight: bold;
+    background: lightblue;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+main, #about, #profile-card {
+    background: var(--card-bg-color);
+    padding: 20px;
+    box-shadow: 2px 2px 10px lightgray;
+}
+
+#profile-card {
+    text-align: center;
+    grid-area: profile;
+}
+
+.linkedin {
+    background: rgb(114, 134, 141);
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#about {
+    grid-area: about;
+    text-align: center;
+}
+
+#about, p {
+    font-size: 18px;
+}
+
+.about_content {
+    text-align: center;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.art {
+    border: 1.5px solid whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#article {
+    grid-area: article;
+}
+
+#article h1 {
+    text-align: center;
+}
+
+#article ul {
+    text-align: left;
+}
+
+#profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.article-img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.previous {
+    grid-area: previous;
+    background-color: rgb(11, 11, 78);
+    text-align: center;
+    box-shadow: 1px 3px 15px lightgray;
+    padding: 20px;
+}
+
+.previous a {
+    color: white;
+}
+
+.profile {
+    border: 1.5px solid whitesmoke;
+    border-radius: 10px;
+}
+
+#pre {
+    border: 1.5px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(71, 71, 142);
+    color: var(--text-color);
+    padding: 15px;
+    box-shadow: 1px 3px 15px lightgray;
+}
+
+
+@media (max-width: 992px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "profile"
+            "article"
+            "about"
+            "previous"
+            "footer";
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .article-img {
+        width: 80%;
+    }
+
+    #profile-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    p, ul, li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 5px;
+    }
+
+    .article-img {
+        width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    p, ul, li {
+        font-size: 15px;
+    }
+
+    #profile-card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .linkedin {
+        margin: 5px auto;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
